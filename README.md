@@ -35,3 +35,40 @@ Models were evaluated on two datasets:
 - Deep learning consistently outperformed traditional ML across both datasets
 
 ## Repository Structure
+
+Notebooks - Kaggle notebooks for both experiments
+MFPT Figures - figures from MFPT experiment
+N-CMAPSS Figures - figures from N-CMAPSS experiment
+Report - Final dissertation
+
+## Notebooks
+
+Both notebooks run on Kaggle with GPU acceleration (Tesla T4).
+
+- `mfpt-ml-dl.ipynb` — Full MFPT bearing pipeline: data loading, synthetic RUL construction, feature extraction, all four models, SHAP analysis
+- `n-cmapss-ml-dl.ipynb` — Full N-CMAPSS turbofan pipeline: HDF5 loading, engine-level splitting, windowing, all four models, SHAP analysis, error analysis
+
+### To reproduce:
+1. Create a new Kaggle notebook with GPU enabled
+2. Add the relevant dataset (MFPT or N-CMAPSS DS02) to your notebook inputs
+3. Upload the notebook and run all cells
+
+## Datasets
+
+Datasets are not included in this repository due to size. They are publicly available:
+
+- **MFPT:** [mfpt.org/fault-data-sets](https://www.mfpt.org/fault-data-sets/) or search "MFPT Fault Data Sets" on Kaggle
+- **N-CMAPSS:** [NASA Prognostics Data Repository](https://data.nasa.gov/dataset/N-CMAPSS-DS02) or search "N-CMAPSS" on Kaggle
+
+## Technologies
+
+- Python 3.12
+- TensorFlow / Keras
+- XGBoost (CUDA accelerated)
+- scikit-learn
+- SHAP
+- NumPy, pandas, matplotlib, seaborn
+
+## License
+
+This project was completed as part of the EN3100 module at Cardiff University School of Engineering. Code is provided for academic reference.
